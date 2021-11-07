@@ -46,7 +46,7 @@ def search_items(alist, items):
     missed_items = []
     
     for item in items:
-        if search_item(alist, item) == -1:
+        if search_item(alist, item) == -1 and item not in missed_items:
             missed_items.append(item)
             
     return missed_items
